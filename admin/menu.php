@@ -44,6 +44,29 @@ include '../config/conexion.php';
       <!-- Botones de la barra de navegación a la derecha -->
       <ul class="navbar-nav ml-auto">
 
+      <style>
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rounded-circle-container {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .rounded-circle-container img {
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 50%;
+    }
+</style>
 
         <style>
     .nav-icon {
@@ -71,9 +94,11 @@ if (isset($_SESSION['nombre_usuario'])) {
   <!-- Logo -->
   <a href="inicio.php" class="brand-link">
     <span class="brand-text font-weight-light">Panel del Administrador</span>
-    <div class="text-center mb-4">
-                            <img src="../ico/logo.png" class="img-fluid rounded-circle" alt="Login Image" width="70px">
-                        </div>
+    <div class="center-container">
+    <div class="rounded-circle-container">
+        <img src="../ico/logo.png" class="img-fluid" alt="Login Image">
+    </div>
+</div>
   </a>
 
   <!-- Sidebar -->
