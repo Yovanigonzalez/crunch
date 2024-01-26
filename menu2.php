@@ -109,7 +109,29 @@
       object-fit: cover;
     }
 
-    
+      /* Estilos para pantallas más pequeñas (ejemplo: hasta 600px) */
+  @media screen and (max-width: 600px) {
+    .menu-container {
+      justify-content: center;
+    }
+
+    .menu-column {
+      width: 100%; /* O ajusta el ancho que prefieras para pantallas más pequeñas */
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+
+    .menu-container + .menu-container {
+      margin-left: 0;
+    }
+
+    .product-container,
+    .product-image {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  
   </style>
 </head>
 <body>

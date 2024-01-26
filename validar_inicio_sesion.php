@@ -25,9 +25,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
             $_SESSION['rol'] = $row['rol'];
 
-            // Redirigir a la página de inicio o a donde sea necesario después del inicio de sesión
-            header("Location: inicio.php");
-            exit();
+            // Redirigir según el rol
+            if ($row['rol'] === 'admin') {
+                header("Location: admin/inicio.php");
+                exit();
+            } elseif ($row['rol'] === 'cliente') {
+                header("Location: client/tienda.php");
+                exit();
+            } else {
+                // Manejar otros roles según sea necesario
+                // Puedes redirigir a una página por defecto o mostrar un mensaje de error
+                header("Location: error.php");
+                exit();
+            }
         } else {
             // Contraseña incorrecta
             header("Location: login.php?status=error&message=Contraseña incorrecta");

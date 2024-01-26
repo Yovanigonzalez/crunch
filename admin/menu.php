@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <?php
-include '../config/config.php';
+include '../config/conexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include '../config/config.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
   <!-- Icono de la página -->
-  <link rel="icon" href="../logo/log.png" type="image/jpeg">
+  <link rel="icon" href="../ico/logo.png" type="image/jpeg">
 
   <!-- Enlaces a los archivos JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -72,7 +72,7 @@ if (isset($_SESSION['nombre_usuario'])) {
   <a href="inicio.php" class="brand-link">
     <span class="brand-text font-weight-light">Panel del Administrador</span>
     <div class="text-center mb-4">
-                            <img src="../log/ico.png" class="img-fluid rounded-circle" alt="Login Image" width="70px">
+                            <img src="../ico/logo.png" class="img-fluid rounded-circle" alt="Login Image" width="70px">
                         </div>
   </a>
 
